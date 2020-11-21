@@ -1,0 +1,153 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+    background-color: #F6F8FF;
+}
+
+#navbar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    background-color: #272D2D;
+    color: #F6F8FF;
+    border-right: 1px solid #88888888;
+    
+    header{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #88888888;
+        padding-right: 10px;
+        padding-left: 10px;
+
+        h1{
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 30px;
+        }
+    }
+
+    ul{
+        overflow-y: auto;
+        height: 77%;
+        list-style-type: none;
+        padding: 0;
+        margin-top: 0;
+        
+    }
+}
+
+.nav-link{
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-bottom: 1px solid #88888888;
+    
+    &:hover{
+        background-color: #23CE6B;
+        color: #272D2D;
+    }
+}
+
+
+#main-doc{
+    margin-left: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.main-section{
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    h2{
+        font-size: 28px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #272D2D;
+    }
+    
+    h3{
+        font-size: 25px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: #272D2D;
+    }
+
+    h4{
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: #272D2D;
+    }
+
+    p, ul{
+        font-size: 17px;
+        font-weight: 400;
+        color: #272D2D;
+        line-height: 1.5;
+    }
+
+    ul{
+        li{
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+
+    code{
+        font-size: 17px;
+        font-weight: 400;
+        color: #A846A0;
+    }
+}
+
+.c-block{
+    background-color: #272D2D;
+    padding: 30px;
+    width: auto;
+    max-width: max-content;
+    border-radius: 10px;
+    border-left: 5px solid #23CE6B;
+}
+
+.links{
+    text-decoration: none;
+    color: #23CE6B;
+    &:hover{
+        color: #A846A0;
+    }
+}
+
+@media (max-width: 750px) {
+
+    #navbar{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 300px;
+
+        ul{
+            height: 64%;
+        }
+    }
+    
+    #main-doc{
+        margin-left: 0px;
+        margin-top: 300px;
+    }
+    
+    .nav-link{
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,680 @@
+<html>
+    <head>
+        <title>C++ Technical Documentation</title>
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <nav id="navbar">
+            <header><h1>c++ documentation</h1></header>
+            <ul>
+                <li><a class="nav-link" href="#introduction">introduction</a></li>
+                <li><a class="nav-link" href="#syntax">syntax</a></li>
+                <li><a class="nav-link" href="#output">output</a></li>
+                <li><a class="nav-link" href="#new_lines">new lines</a></li>
+                <li><a class="nav-link" href="#comments">comments</a></li>
+                <li><a class="nav-link" href="#variables">variables</a></li>
+                <li><a class="nav-link" href="#identifiers">identifiers</a></li>
+                <li><a class="nav-link" href="#constants">constants</a></li>
+                <li><a class="nav-link" href="#user_inputs">user inputs</a></li>
+                <li><a class="nav-link" href="#operators">operators</a></li>
+                <li><a class="nav-link" href="#strings">strings</a></li>
+                <li><a class="nav-link" href="#switch">switch</a></li>
+                <li><a class="nav-link" href="#while_loop">while loop</a></li>
+                <li><a class="nav-link" href="#do_while_loop">do while loop</a></li>
+                <li><a class="nav-link" href="#for_loop">for loop</a></li>
+                <li><a class="nav-link" href="#arrays">arrays</a></li>
+                <li><a class="nav-link" href="#reference_variables">reference variables</a></li>
+                <li><a class="nav-link" href="#pointers">pointers</a></li>
+                <li><a class="nav-link" href="#functions">functions</a></li>
+                <li><a class="nav-link" href="#classes_and_objects">classes and objects</a></li>
+                <li><a class="nav-link" href="#files">files</a></li>
+                <li><a class="nav-link" href="#reference">reference</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-doc">
+            <section class="main-section" id="introduction">
+                <header><h2>introduction</h2></header>
+                <article>
+                    <p>C++ is a popular programming language. C++ is used to create computer programs. The language was updated 3 major times in 2011, 2014, and 2017 to C++11, C++14, and C++17. - You will enjoy it!</p>
+                    <h3>what is C++</h3>
+                    <ul>
+                        <li>C++ is a cross-platform language that can be used to create high-performance applications.</li>
+                        <li>C++ was developed by Bjarne Stroustrup, as an extension to the C language.</li>
+                        <li>C++ gives programmers a high level of control over system resources and memory.</li>
+                        <li>C++ is one of the world's most popular programming languages.</li>
+                        <li>C++ can be found in today's operating systems, Graphical User Interfaces, and embedded systems.</li>
+                        <li>C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</li>
+                        <li>C++ is portable and can be used to develop applications that can be adapted to multiple platforms.</li>
+                    </ul>
+                    <h3>getting started</h3>
+                    <p>To start using C++, you need two things:</p>
+                    <ul>
+                        <li>A text editor, like Notepad, to write C++ code</li>
+                        <li>A compiler, like GCC, to translate the C++ code into a language that the computer will understand</li>
+                    </ul>
+                    <p>There are many text editors and compilers to choose from. In this tutorial, we will use an IDE (see below).</p>
+                    <h3>install IDE</h3>
+                    <p>An IDE (Integrated Development Environment) is used to edit AND compile the code.</p>
+                    <p>Popular IDE's include Code::Blocks, Eclipse, and Visual Studio. These are all free, and they can be used to both edit and debug C++ code.</p>
+                    <p><strong>Note:</strong> Web-based IDE's can work as well, but functionality is limited.</p>
+                    <p>You can find the latest version of Codeblocks at <a class="links" target="_blank" href="http://www.codeblocks.org/downloads/26">http://www.codeblocks.org/downloads/26</a>. Download the mingw-setup.exe file, which will install the text editor with a compiler. </p>
+                    <h3>a simple HTML program</h3>
+                    <div class="c-block">
+                    <code>
+                        #include &lt;iostream&gt;<br>
+                            using namespace std;<br>
+                            
+                            int main() {<br>
+                              cout << "Hello World!";<br>
+                              return 0;<br>
+                            } 
+                    </code>
+                    </div>
+                    <p>Don't worry if you don't understand the code above - we will discuss it in detail in later chapters.</p>
+                </article>
+            </section>
+            <section class="main-section" id="syntax">
+                <header><h2>syntax</h2></header>
+                <article>
+                    <p>Let's break up the following code to understand it better:</p>
+                    <div class="c-block">
+                    <code>
+                        #include &lt;iostream&gt;<br>
+                            using namespace std;<br>
+                            
+                            int main() {<br>
+                              cout << "Hello World!";<br>
+                              return 0;<br>
+                            } 
+                    </code>
+                    </div>
+                    <h4>Example explained</h4>
+                    <ul>
+                        <li><strong>Line 1:</strong><code> #include &lt;iostream&gt;</code> is a header file library that lets us work with input and output objects, such as<code> cout</code> (used in line 5). Header files add functionality to C++ programs.</li>
+                        <li><strong>Line 2:</strong><code> using namespace std</code> means that we can use names for objects and variables from the standard library.</li>
+                        <li><strong>Line 3:</strong> A blank line. C++ ignores white space.</li>
+                        <li><strong>Line 4:</strong> Another thing that always appear in a C++ program, is<code> int main()</code>. This is called a function. Any code inside its curly brackets <code>{}</code> will be executed.</li>
+                        <li><strong>Line 5:</strong> <code> cout</code>. (pronounced "see-out") is an object used together with the insertion operator (<code><<</code>) to output/print text. In our example it will output "Hello World".</li>
+                        <li><strong>Note:</strong> Every C++ statement ends with a semicolon <code>;</code>.</li>
+                        <li><strong>Note:</strong> The body of <code>int main()</code> could also been written as: <code>int main () { cout << "Hello World! "; return 0; }</code></li>
+                        <li><strong>Remember:</strong> The compiler ignores white spaces. However, multiple lines makes the code more readable.</li>
+                        <li><strong>Line 6:</strong> <code>return 0</code> ends the main function.</li>
+                        <li><strong>Line 7:</strong> Do not forget to add the closing curly bracket <code>}</code> to actually end the main function.</li>
+                    </ul>
+                    <h3>omitting namespace</h3>
+                    <p>You might see some C++ programs that runs without the standard namespace library. The <code>using namespace std</code> line can be omitted and replaced with the <code>std</code> keyword, followed by the <code>::</code> operator for some objects.</p>
+                </article>
+            </section>
+            <section class="main-section" id="output">
+                <header><h2>output</h2></header>
+                <article>
+                    <h3>output (print text)</h3>
+                    <p>The <code>cout</code> object, together with the <code><<</code> operator, is used to output values/print text. You can add as many <code>cout</code> objects as you want. However, note that it does not insert a new line at the end of the output.</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        #include &lt;iostream&gt;<br>
+                            using namespace std;<br>
+                            
+                            int main() {<br>
+                              cout << "Hello World!";<br>
+                              cout << "I am learning C++";<br>
+                              return 0;<br>
+                            } 
+                    </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="new_lines">
+                <header><h2>new lines</h2></header>
+                <article>
+                    <p>To insert a new line, you can use the <code>\n</code> character. Two <code>\n</code> characters after each other will create a blank line. Another way to insert a new line, is with the <code>endl</code> manipulator.</p>
+                    <div class="c-block">
+                    <code>
+                        #include &lt;iostream&gt;<br>
+                            using namespace std;<br>
+                            
+                            int main() {<br>
+                              cout << "Hello World! \n\n";<br>
+                              cout << "I am learning C++" << endl;<br>
+                              cout << "c++ is fun";<br>
+                              return 0;<br>
+                            } 
+                    </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="comments">
+                <header><h2>comments</h2></header>
+                <article>
+                    <h3>single line comments</h3>
+                    <p>Comments can be used to explain C++ code, and to make it more readable. It can also be used to prevent execution when testing alternative code. Comments can be singled-lined or multi-lined.</p>
+                    <p>Single-line comments start with two forward slashes (<code>//</code>).</p>
+                    <p>Any text between <code>//</code> and the end of the line is ignored by the compiler (will not be executed).</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        // This is a comment<br>
+                        cout << "Hello World!";
+                    </code>
+                    </div>
+                    <h3>multi line comments</h3>
+                    <p>Multi-line comments start with <code>/*</code> and ends with <code>*/</code>.</p>
+                    <p>Any text between <code>/*</code> and <code>*/</code> will be ignored by the compiler.</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        /* The code below will print the words Hello World!<br>
+                        to the screen, and it is amazing */<br>
+                        cout << "Hello World!"; 
+                    </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="variables">
+                <header><h2>variables</h2></header>
+                <article>
+                    <h3>variables</h3>
+                    <p>Variables are containers for storing data values.</p>
+                    <p>In C++, there are different types of variables (defined with different keywords), for example:</p>
+                    <ul>
+                        <li><code>int</code> - stores integers (whole numbers), without decimals, such as 123 or -123</li>
+                        <li><code>double</code> - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+                        <li><code>char</code> - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
+                        <li><code>string</code> - stores text, such as "Hello World". String values are surrounded by double quotes</li>
+                        <li><code>bool</code> - stores values with two states: true or false</li>
+                    </ul>
+                    <h3>declaring variables</h3>
+                    <p>To create a variable, you must specify the type and assign it a value:</p>
+                    <h4>syntax</h4>
+                    <div class="c-block">
+                    <code>type variable = value;</code>
+                    </div>
+                    <p>Where type is one of C++ types, and variable is the name of the variable (such as x or myName). The equal sign is used to assign values to the variable.</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        int myNum = 5;               // Integer (whole number without decimals)<br>
+                        double myFloatNum = 5.99;    // Floating point number (with decimals)<br>
+                        char myLetter = 'D';         // Character<br>
+                        string myText = "Hello";     // String (text)<br>
+                        bool myBoolean = true;       // Boolean (true or false)
+                    </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="identifiers">
+                <header><h2>identifiers</h2></header>
+                <article>
+                    <p>All C++ variables must be identified with unique names.</p>
+                    <p>These unique names are called <strong>identifiers</strong>.</p>
+                    <p>Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).</p>
+                    <p><strong>Note:</strong> It is recommended to use descriptive names in order to create understandable and maintainable code.</p>
+                    <div class="c-block">
+                    <code>
+                        // Good<br>
+                        int minutesPerHour = 60;<br><br>
+
+                        // OK, but not so easy to understand what m actually is<br>
+                        int m = 60;
+                    </code>
+                    </div>
+                    <p>The general rules for constructing names for variables (unique identifiers) are:</p>
+                    <ul>
+                        <li>Names can contain letters, digits and underscores</li>
+                        <li>Names must begin with a letter or an underscore (_)</li>
+                        <li>Names are case sensitive (myVar and myvar are different variables)</li>
+                        <li>Names cannot contain whitespaces or special characters like !, #, %, etc.</li>
+                        <li>Reserved words (like C++ keywords, such as <code>int</code>) cannot be used as names</li>
+                    </ul>
+                </article>
+            </section>
+            <section class="main-section" id="constants">
+                <header><h2>constants</h2></header>
+                <article>
+                    <p>When you do not want others (or yourself) to override existing variable values, use the <code>const</code> keyword (this will declare the variable as "constant", which means <strong>unchangeable and read-only</strong>)</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        const int myNum = 15;  // myNum will always be 15<br>
+                        myNum = 10;  // error: assignment of read-only variable 'myNum' 
+                    </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="user_inputs">
+                <header><h2>user inputs</h2></header>
+                <article>
+                    <p>You have already learned that <code>cout</code> is used to output (print) values. Now we will use <code>cin</code> to get user input.</p>
+                    <p><code>cin</code> is a predefined variable that reads data from the keyboard with the extraction operator (<code>>></code>).</p>
+                    <p>In the following example, the user can input a number, which is stored in the variable x. Then we print the value of x:</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        int x;<br> 
+                        cout << "Type a number: "; // Type a number and press enter<br>
+                        cin >> x; // Get user input from the keyboard<br>
+                        cout << "Your number is: " << x; // Display the input value 
+                    </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="operators">
+                <header><h2>operators</h2></header>
+                <article>
+                    <p>Operators are used to perform operations on variables and values.</p>
+                    <h3>arithmetic operators</h3>
+                    <p>The <code>+</code> operator is often used to add together two values, it can also be used to add together a variable and a value, or a variable and another variable.</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        int sum1 = 100 + 50;        // 150 (100 + 50)<br>
+                        int sum2 = sum1 + 250;      // 400 (150 + 250)<br>
+                        int sum3 = sum2 + sum2;     // 800 (400 + 400)
+                    </code>
+                    </div>
+                    <h3>assignment operators</h3>
+                    <p>Assignment operators are used to assign values to variables.</p>
+                    <p>In the example below, we use the assignment operator to assign the value 10 to a variable called x:</p>
+                    <div class="c-block">
+                    <code>
+                        int x = 10; 
+                    </code>
+                    </div>
+                    <h3>comparison operators</h3>
+                    <p>Comparison operators are used to compare two values.</p>
+                    <p><strong>Note:</strong> The return value of a comparison is either true (1) or false (0).</p>
+                    <p>In the following example, we use the greater than operator to find out if 5 is greater than 3:</p>
+                    <div class="c-block">
+                    <code>
+                        int x = 5;<br>
+                        int y = 3;<br>
+                        cout << (x > y);<br>
+                        // returns 1 (true) because 5 is greater than 3 
+                    </code>
+                    </div>
+                    <h3>logical operators</h3>
+                    <p>Logical operators are used to determine the logic between variables or values.</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        int main() {<br>
+                            int x = 5;<br>
+                            int y = 3;<br>
+                            cout << (x > 3 && x < 10);<br>
+                            // returns true (1) because 5 is greater than 3 AND 5 is less than 10<br>
+                            return 0;<br>
+                          }
+                    </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="strings">
+                <header><h2>strings</h2></header>
+                <article>
+                    <p>Strings are used for storing text.</p>
+                    <p>A <code>string</code> variable contains a collection of characters surrounded by double quotes.</p>
+                    <p>To use strings, you must include an additional header file in the source code, the <code>&lt;string&gt;</code> library</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        // Include the string library<br>
+                        #include <string><br><br>
+
+                        // Create a string variable<br>
+                        string greeting = "Hello"; 
+                    </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="switch">
+                <header><h2>switch</h2></header>
+                <article>
+                    <h3>switch statements</h3>
+                    <p>Use the <code>switch</code> statement to select one of many code blocks to be executed.</p>
+                    <h4>syntax</h4>
+                    <div class="c-block">
+                    <code>
+                        switch(expression) {<br>
+                            case x:<br>
+                              // code block<br>
+                              break;<br>
+                            case y:<br>
+                              // code block<br>
+                              break;<br>
+                            default:<br>
+                              // code block<br>
+                          }
+                    </code>
+                    </div>
+                    <p>This is how it works:</p>
+                    <ul>
+                        <li>The <code>switch</code> expression is evaluated once</li>
+                        <li>The value of the expression is compared with the values of each <code>case</code></li>
+                        <li>The <code>break</code> and <code>default</code> keywords are optional, and will be described later</li>
+                    </ul>
+                    <h3>the break keyword</h3>
+                    <p>When C++ reaches a <code>break</code> keyword, it breaks out of the switch block.</p>
+                    <p>When a match is found, and the job is done, it's time for a break. There is no need for more testing.</p>
+                    <h3>the default keyword</h3>
+                    <p>The <code>default</code> keyword specifies some code to run if there is no case match.</p>
+                </article>
+            </section>
+            <section class="main-section" id="while_loop">
+                <header><h2>while loop</h2></header>
+                <article>
+                    <p>The <code>while</code> loop loops through a block of code as long as a specified condition is true.</p>
+                    <h4>syntax</h4>
+                    <div class="c-block">
+                    <code>
+                        while (condition) {<br>
+                            // code block to be executed<br>
+                          }
+                    </code>
+                    </div>
+                    <p>In the example below, the code in the loop will run, over and over again, as long as a variable (i) is less than 5:</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        int i = 0;<br>
+                        while (i < 5) {<br>
+                        cout << i << "\n";<br>
+                        i++;<br>
+                        }
+                    </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="do_while_loop">
+                <header><h2>do while loop</h2></header>
+                <article>
+                    <p>The <code>do/while</code> loop is a variant of the <code>while</code> loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+                    <h4>syntax</h4>
+                    <div class="c-block">
+                    <code>
+                        do {<br>
+                            // code block to be executed<br>
+                          }<br>
+                          while (condition);
+                    </code>
+                    </div>
+                    <p>The example below uses a <code>do/while</code> loop. The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        int i = 0;<br>
+                        do {<br>
+                        cout << i << "\n";<br>
+                        i++;<br>
+                        }<br>
+                        while (i < 5);<br>
+                    </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="for_loop">
+                <header><h2>for loop</h2></header>
+                <article>
+                    <p>When you know exactly how many times you want to loop through a block of code, use the <code>for</code> loop instead of a <code>while</code> loop:</p>
+                    <h4>syntax</h4>
+                    <div class="c-block">
+                    <code>
+                        for (statement 1; statement 2; statement 3) {<br>
+                            // code block to be executed<br>
+                          }
+                    </code>
+                    </div>
+                    <p><strong>Statement 1</strong> is executed (one time) before the execution of the code block.</p>
+                    <p><strong>Statement 2</strong> defines the condition for executing the code block.</p>
+                    <p><strong>Statement 3</strong> is executed (every time) after the code block has been executed.</p>
+                    <p>The example below will print the numbers 0 to 4:</p>
+                    <div class="c-block">
+                    <code>
+                        for (int i = 0; i < 5; i++) {<br>
+                            cout << i << "\n";<br>
+                          }
+                    </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="arrays">
+                <header><h2>arrays</h2></header>
+                <article>
+                    <h3>arrays</h3>
+                    <p>Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.</p>
+                    <p>To declare an array, define the variable type, specify the name of the array followed by square brackets and specify the number of elements it should store:</p>
+                    <div class="c-block">
+                    <code>string cars[4];</code>
+                    </div>
+                    <p>We have now declared a variable that holds an array of four strings. To insert values to it, we can use an array literal - place the values in a comma-separated list, inside curly braces:</p>
+                    <div class="c-block">
+                    <code>string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};</code>
+                    </div>
+                    <p>To create an array of three integers, you could write:</p>
+                    <div class="c-block">
+                    <code>int myNum[3] = {10, 20, 30};</code>
+                    </div>
+                    <h3>access the elements of an array</h3>
+                    <p>You access an array element by referring to the index number.</p>
+                    <p>This statement accesses the value of the <strong>first element</strong> in <strong>cars</strong>:</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};<br>
+                        cout << cars[0];<br>
+                        // Outputs Volvo
+                    </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="reference_variables">
+                <header><h2>reference variables</h2></header>
+                <article>
+                    <p>A reference variable is a "reference" to an existing variable, and it is created with the <code>&</code> operator:</p>
+                    <div class="c-block">
+                    <code>
+                        string food = "Pizza";  // food variable<br>
+                        string &meal = food;    // reference to food<br>
+                    </code>
+                    </div>
+                    <p>Now, we can use either the variable name <code>food</code> or the reference name <code>meal</code> to refer to the <code>food</code> variable:</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        string food = "Pizza";<br>
+                        string &meal = food;<br><br>
+
+                        cout << food << "\n";  // Outputs Pizza<br>
+                        cout << meal << "\n";  // Outputs Pizza
+                    </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="pointers">
+                <header><h2>pointers</h2></header>
+                <article>
+                    <p>A pointer is a variable that stores the memory address as its value.</p>
+                    <p>A pointer variable points to a data type of the same type, and is created with the <code>*</code> operator. The address of the variable you're working with is assigned to the pointer:</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        string food = "Pizza";  // A food variable of type string<br>
+                        string* ptr = &food;    // A pointer variable, with the name ptr, that stores the address of food<br><br>
+
+                        // Output the value of food (Pizza)<br>
+                        cout << food << "\n";<br><br>
+
+                        // Output the memory address of food (0x6dfed4)<br>
+                        cout << &food << "\n";<br><br>
+
+                        // Output the memory address of food with the pointer (0x6dfed4)<br>
+                        cout << ptr << "\n";
+                    </code>
+                    </div>
+                    <h4>example explained</h4>
+                    <p>Create a pointer variable with the name <code>ptr</code>, that points to a <code>string</code> variable, by using the asterisk sign <code>*</code>. Note that the type of the pointer has to match the type of the variable you're working with.</p>
+                    <p>Use the <code>&</code> operator to store the memory address of the variable called <code>food</code>, and assign it to the pointer.</p>
+                    <p>Now, <code>ptr</code> holds the value of <code>food</code>'s memory address.</p>
+                </article>
+            </section>
+            <section class="main-section" id="functions">
+                <header><h2>functions</h2></header>
+                <article>
+                    <p>A function is a block of code which only runs when it is called.</p>
+                    <p>You can pass data, known as parameters, into a function.</p>
+                    <p>Functions are used to perform certain actions, and they are important for reusing code: Define the code once, and use it many times.</p>
+                    <h3>create a function</h3>
+                    <p>To create (often referred to as declare) a function, specify the name of the function, followed by parentheses ().</p>
+                    <h4>syntax</h4>
+                    <div class="c-block">
+                    <code>
+                        void myFunction() {<br>
+                            // code to be executed<br>
+                          }
+                    </code>
+                    </div>
+                    <ul>
+                        <li><code>myFunction()</code> is the name of the function.</li>
+                        <li><code>void</code> means that the function does not have a return value.</li>
+                        <li>inside the function (the body), add code that defines what the function should do.</li>
+                    </ul>
+                    <h3>call a function</h3>
+                    <p>Declared functions are not executed immediately. They are "saved for later use", and will be executed later, when they are called.</p>
+                    <p>To call a function, write the function's name followed by two parentheses <code>()</code> and a semicolon <code>;</code></p>
+                    <p>A function can be called multiple times.</p>
+                    <p>In the following example, <code>myFunction()</code> is used to print a text (the action), when it is called</p>
+                    <div class="c-block">
+                    <code>
+                        // Create a function<br>
+                        void myFunction() {<br>
+                        cout << "I just got executed!";<br>
+                        }<br><br>
+
+                        int main() {<br>
+                        myFunction(); // call the function<br>
+                        return 0;<br>
+                        }<br><br>
+
+                        // Outputs "I just got executed!"
+                    </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="classes_and_objects">
+                <header><h2>classes and objects</h2></header>
+                <article>
+                    <p>Everything in C++ is associated with classes and objects, along with its attributes and methods. For example: in real life, a car is an object. The car has attributes, such as weight and color, and methods, such as drive and brake.</p>
+                    <p>Attributes and methods are basically variables and functions that belongs to the class. These are often referred to as "class members".</p>
+                    <p>A class is a user-defined data type that we can use in our program, and it works as an object constructor, or a "blueprint" for creating objects.</p>
+                    <h3>create a class</h3>
+                    <p>To create a class, use the class keyword.</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        class MyClass {       // The class<br>
+                            public:             // Access specifier<br>
+                              int myNum;        // Attribute (int variable)<br>
+                              string myString;  // Attribute (string variable)<br>
+                          };
+                    </code>
+                    </div>
+                    <h4>example explained</h4>
+                    <ul>
+                        <li>The <code>class</code> keyword is used to create a class called <code>MyClass</code>.</li>
+                        <li>The <code>public</code> keyword is an access specifier, which specifies that members (attributes and methods) of the class are accessible from outside the class.</li>
+                        <li>Inside the class, there is an integer variable <code>myNum</code> and a string variable <code>myString</code>. When variables are declared within a class, they are called attributes.</li>
+                        <li>At last, end the class definition with a semicolon <code>;</code>.</li>
+                    </ul>
+                    <h3>create an object</h3>
+                    <p>In C++, an object is created from a class. We have already created the class named <code>MyClass</code>, so now we can use this to create objects.</p>
+                    <p>To create an object of <code>MyClass</code>, specify the class name, followed by the object name.</p>
+                    <p>To access the class attributes (<code>myNum</code> and <code>myString</code>), use the dot syntax (<code>.</code>) on the object</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        class MyClass {       // The class<br>
+                            public:             // Access specifier<br>
+                              int myNum;        // Attribute (int variable)<br>
+                              string myString;  // Attribute (string variable)<br>
+                          };<br><br>
+                          
+                          int main() {<br>
+                            MyClass myObj;  // Create an object of MyClass<br><br>
+                          
+                            // Access attributes and set values<br>
+                            myObj.myNum = 15; <br>
+                            myObj.myString = "Some text";<br><br>
+                          
+                            // Print attribute values<br>
+                            cout << myObj.myNum << "\n";<br>
+                            cout << myObj.myString;<br>
+                            return 0;<br>
+                          }
+                    </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="files">
+                <header><h2>files</h2></header>
+                <article>
+                    <p>The <code>fstream</code> library allows us to work with files.</p>
+                    <p>To use the <code>fstream</code> library, include both the standard &lt;iostream&gt; and the &lt;fstream&gt; header file</p>
+                    <h3>create and write to a file</h3>
+                    <p>To create a file, use either the <code>ofstream</code> or <code>fstream</code> class, and specify the name of the file.</p>
+                    <p>To write to the file, use the insertion operator (<code><<</code>).</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        #include &lt;iostream&gt;<br>
+                            #include &lt;fstream&gt;<br>
+                            using namespace std;<br><br>
+                            
+                            int main() {<br>
+                              // Create and open a text file<br>
+                              ofstream MyFile("filename.txt");<br><br>
+                            
+                              // Write to the file<br>
+                              MyFile << "Files can be tricky, but it is fun enough!";<br><br>
+                            
+                              // Close the file<br>
+                              MyFile.close();<br>
+                            } 
+                    </code>
+                    </div>
+                    <p>It is considered good practice to close the file, it can clean up unnecessary memory space.</p>
+                    <h3>read a file</h3>
+                    <p>To read from a file, use either the <code>ifstream</code> or <code>fstream</code> class, and the name of the file.</p>
+                    <p>Note that we also use a <code>while</code> loop together with the <code>getline()</code> function (which belongs to the <code>ifstream</code> class) to read the file line by line, and to print the content of the file.</p>
+                    <h4>example</h4>
+                    <div class="c-block">
+                    <code>
+                        // Create a text string, which is used to output the text file<br>
+                        string myText;<br><br>
+
+                        // Read from the text file<br>
+                        ifstream MyReadFile("filename.txt");<br><br>
+
+                        // Use a while loop together with the getline() function to read the file line by line<br>
+                        while (getline (MyReadFile, myText)) {<br>
+                        // Output the text from the file<br>
+                        cout << myText;<br>
+                        }<br><br>
+
+                        // Close the file<br>
+                        MyReadFile.close(); 
+                    </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="reference">
+                <header><h2>reference</h2></header>
+                <p>All the documentation in this page is taken from <a class="links" target="_blank" href="https://www.w3schools.com/cpp/default.asp">W3schools.</a></p>
+            </section>
+        </main>
+        <!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
+    </body>
+</html>
